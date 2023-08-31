@@ -1,11 +1,15 @@
 {% extends 'pizzas/base.html' %}
+
+
 {% block content %}
-    <h1> Home Page </h1>
+    <h1>home page</h1>
+    
+    {% if user.is_authenticated %}
+        <h2>welcome  {{ user.username }} </h2>
+    {% else %}
+        <h2>welcome guest</h2>       
+    {% endif %}
+        
+    
 {% endblock content %}
-
-
-
-
-
-
-
+    
